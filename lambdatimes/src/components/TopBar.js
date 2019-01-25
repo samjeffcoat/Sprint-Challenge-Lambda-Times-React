@@ -41,6 +41,42 @@ display: flex;
   }
 `;
 
+const ContainerCenter = styled.div`
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+
+  span {
+     cursor: pointer;
+  margin-right: 5%;
+  }
+  span:last-child {
+    margin-right:0;
+  }
+  span:hover{
+    text-decoration:underline;
+  }
+`;
+
+const ContainerRight = styled.div`
+display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+  span {
+    cursor:pointer;
+  }
+
+
+
+`;
+
 const TopBar = () => {
   return (
     <TopBarFull>
@@ -48,12 +84,12 @@ const TopBar = () => {
         <ContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
         </ContainerLeft>
-        <div className="container-center">
+        <ContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+        </ContainerCenter>
+        <ContainerRight>
           <span>LOG IN</span>
-        </ContainerLeft>
+        </ContainerRight>
         </TopBarContainer>
       </TopBarFull>
   )
